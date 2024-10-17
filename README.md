@@ -25,3 +25,8 @@ We’re going to change the representation of our source code two times before w
 The first transformation, from source code to tokens, is called “lexical analysis”, or “lexing” for short. It’s done by 
 a lexer (tokenizer or scanner). **Tokens** themselves are small, easily categorizable data structures that are then fed to the parser,
 which does the second transformation and turns the tokens into an “Abstract Syntax Tree”.
+
+**REPL** stands for “Read Eval Print Loop”. Sometimes
+the REPL is called “console”, sometimes “interactive mode”. The concept is the same: the
+REPL reads input, sends it to the interpreter for evaluation, prints the result/output of the
+interpreter and starts again.
