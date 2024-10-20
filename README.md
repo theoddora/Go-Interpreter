@@ -57,11 +57,14 @@ Backus-Naur Form (BNF) or the Extended Backus-Naur Form (EBNF).
 There are two main strategies when parsing a programming language: top-down parsing or  bottom-up parsing. “Recursive 
 descent parsing”, “Early parsing” or “predictive parsing” are all variations of top-down  parsing.
 
+There are a set of “assertion functions” nearly all parsers share. Their primary purpose is to enforce  the correctness
+of the order of tokens by checking the type of the next token.
+
 ## Parsing let statements
 Expressions produce values, statements don’t.
 
 > let \<identifier> = \<expression>;
 
-There are a set of “assertion functions” nearly all parsers share. Their primary purpose is to enforce  the correctness 
-of the order of tokens by checking the type of the next token. 
+## Parsing return statements
 
+> return <expression>;
