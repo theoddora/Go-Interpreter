@@ -84,7 +84,11 @@ associated with it, depending on the token’s position - infix or prefix.
 > (_which priority do different operators have_)
 
 ### Parsing functions
+We define two types of functions: a prefix parsing function and an infix parsing function. _prefixParseFns_ gets called 
+when we encounter the associated token type in prefix position and infixParseFn gets called when we encounter the token 
+type in infix position.
+
 All the parsing functions, prefixParseFn or infixParseFn, are going to follow the following protocol: start with 
-curToken being the type of token we re associated with and return with curToken being the last token that’s part of our
+curToken being the type of token we are associated with and return with curToken being the last token that’s part of our
 expression type. Never advance the tokens too far.
 
