@@ -80,8 +80,8 @@ to parsers based on context-free grammars and the Backus-Naur-Form. Pratt associ
 associated with it, depending on the token’s position - infix or prefix.
 
 > operator precedence == order of operations 
-> 
-> (_which priority do different operators have_)
+
+ (_which priority do different operators have_)
 
 ### Parsing functions
 We define two types of functions: a prefix parsing function and an infix parsing function. _prefixParseFns_ gets called 
@@ -92,3 +92,6 @@ All the parsing functions, prefixParseFn or infixParseFn, are going to follow th
 curToken being the type of token we are associated with and return with curToken being the last token that’s part of our
 expression type. Never advance the tokens too far.
 
+### Prefix operators
+The structure of prefix operators usage is the following:
+> \<prefix operator>\<expression>;
