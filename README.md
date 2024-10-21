@@ -67,4 +67,19 @@ Expressions produce values, statements don’t.
 
 ## Parsing return statements
 
-> return <expression>;
+> return \<expression>;
+
+## Parsing expressions
+The parser has to know about operator precedences
+where the precedence of * is higher than +.
+
+### Pratt Parsing
+“Top Down Operator Precedence” by Vaughan Pratt is an approach to parsing expressions. It was invented as an alternative
+to parsers based on context-free grammars and the Backus-Naur-Form. Pratt associates parsing functions (which he calls 
+“semantic code”) with single token types. A crucial part of this idea is that each token type can have two parsing functions 
+associated with it, depending on the token’s position - infix or prefix.
+
+> operator precedence == order of operations 
+> 
+> (_which priority do different operators have_)
+
