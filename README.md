@@ -70,8 +70,9 @@ Expressions produce values, statements don’t.
 > return \<expression>;
 
 ## Parsing expressions
-The parser has to know about operator precedences
-where the precedence of * is higher than +.
+The parser has to know about operator precedences where the precedence of * is higher than +. The goal is to have 
+expressions involving operators with a higher precedence to be deeper in the tree than expressions with lower precedence
+operators.
 
 ### Pratt Parsing
 “Top Down Operator Precedence” by Vaughan Pratt is an approach to parsing expressions. It was invented as an alternative
@@ -95,3 +96,4 @@ expression type. Never advance the tokens too far.
 ### Prefix operators
 The structure of prefix operators usage is the following:
 > \<prefix operator>\<expression>;
+
